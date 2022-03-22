@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Box, Button, Divider, Drawer, Typography, useMediaQuery } from '@mui/material';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+// import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { ChartBar as ChartBarIcon } from '../icons/chart-bar';
 import { Cog as CogIcon } from '../icons/cog';
 import { Lock as LockIcon } from '../icons/lock';
@@ -21,6 +21,11 @@ const items = [
     href: '/',
     icon: (<ChartBarIcon fontSize="small" />),
     title: 'Dashboard'
+  },
+  {
+    href: '/orders',
+    icon: (<ChartBarIcon fontSize="small" />),
+    title: 'Orders'
   },
   {
     href: '/customers',
@@ -124,15 +129,12 @@ export const DashboardSidebar = (props) => {
                   color="inherit"
                   variant="subtitle1"
                 >
-                  Acme Inc
+                  DineInTaste
                 </Typography>
                 <Typography
                   color="neutral.400"
                   variant="body2"
                 >
-                  Your tier
-                  {' '}
-                  : Premium
                 </Typography>
               </div>
               <SelectorIcon
@@ -162,7 +164,7 @@ export const DashboardSidebar = (props) => {
           ))}
         </Box>
         <Divider sx={{ borderColor: '#2D3748' }} />
-        <Box
+        {/* <Box
           sx={{
             px: 2,
             py: 3
@@ -211,7 +213,7 @@ export const DashboardSidebar = (props) => {
               Pro Live Preview
             </Button>
           </NextLink>
-        </Box>
+        </Box> */}
       </Box>
     </>
   );
